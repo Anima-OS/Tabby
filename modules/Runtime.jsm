@@ -16,6 +16,7 @@
 
 const { classes: Cc, interfaces: Ci, results: Cr, utils: Cu } = Components;
 const { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+const { require } = Cu.import('resource://qbrt/modules/Loader.jsm', {});
 const ChromeRegistry = Cc['@mozilla.org/chrome/chrome-registry;1'].getService(Ci.nsIXULChromeRegistry);
 
 this.EXPORTED_SYMBOLS = ['Runtime'];
@@ -39,6 +40,8 @@ this.Runtime = {
     const sandbox = new Cu.Sandbox(systemPrincipal, {
       wantComponents: true,
     });
+
+    sandbox.require = require;
 
     global.commandLineArgs = commandLineArgs;
     global.packageJSON = packageJSON;

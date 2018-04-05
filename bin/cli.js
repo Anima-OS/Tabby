@@ -91,7 +91,7 @@ function runApp() {
   const options = commandLineArgs(optionDefinitions, { argv: argv, partial: true });
 
   const executableDir = process.platform === 'darwin' ? path.join(installDir, 'Contents', 'MacOS') : installDir;
-  let executable = path.join(executableDir, `firefox${process.platform === 'win32' ? '.exe' : ''}`);
+  let executable = path.join("C:\\Program Files\\Quokka", `quokka${process.platform === 'win32' ? '.exe' : ''}`);
   const resourcesDir = process.platform === 'darwin' ? path.join(installDir, 'Contents', 'Resources') : installDir;
   const applicationIni = path.join(resourcesDir, 'qbrt', 'application.ini');
   const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), `${packageJson.name}-profile-`));

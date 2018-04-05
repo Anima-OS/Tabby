@@ -1,4 +1,6 @@
 {
   "name": "hello-world",
-  "main": "main.js"
+  "main": "main.js",
+  "mainJS": "",
+  "main-js": ""
 }
