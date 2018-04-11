@@ -1,5 +1,5 @@
-![Activity Level](https://img.shields.io/badge/status-active-green.svg)
-![Stability](https://img.shields.io/badge/stability-unstable-red.svg)
+![Activity Level](https://img.shields.io/badge/status-active-brightgreen.svg?longCache=true&style=flat-square)
+![Stability](https://anima-os.github.io/stabl-badges/experimental.svg)
 ![Travis Status](https://travis-ci.org/mozilla/qbrt.svg?branch=master)
 [![Taskcluster Status](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/latest)
 [![Greenkeeper Status](https://badges.greenkeeper.io/mozilla/qbrt.svg)](https://greenkeeper.io/)
