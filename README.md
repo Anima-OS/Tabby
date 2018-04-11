@@ -17,19 +17,14 @@ common web technologies (HTML, JS, CSS) and a well documented API.
 
 # Usage
 
-Install it via npm:
+## Installation
+
+>TODO
+
+## Launching an application
 
 ```bash
-npm install -g qbrt
-```
-
-Installing it also installs a Gecko runtime (currently a nightly build
-of Firefox, but in the future it could be a stable build of Firefox
-or a custom Gecko runtime). Its simplest use is then to invoke the *run*
-command with a URL:
-
-```bash
-qbrt run https://eggtimer.org/
+tabby https://mobile.twitter.com
 ```
 
 Which will start a process and load the URL into a native window:
@@ -39,11 +34,11 @@ Which will start a process and load the URL into a native window:
 URLs loaded in this way don't have privileged access to the system.
 They're treated as web content, not application chrome.
 
-To load a desktop app with system privileges, point qbrt at a local directory
-containing a package.json file and main script:
+To load a desktop app with system privileges, point tabby at a local directory
+containing a ``package.json`` app manifest.
 
 ```bash
-qbrt run path/to/my/app/
+tabby run path/to/my/app/
 ```
 
 For an example, clone qbrt's repo and try its example/ app, which will start
