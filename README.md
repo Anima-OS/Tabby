@@ -4,7 +4,10 @@
 [![Taskcluster Status](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/latest)
 [![Greenkeeper Status](https://badges.greenkeeper.io/mozilla/qbrt.svg)](https://greenkeeper.io/)
 
-qbrt: CLI to a Gecko desktop app runtime
+
+![Logo](logo.svg)
+
+Tabby: Quokka App Runtime
 ===
 
 qbrt is a command-line interface to a Gecko desktop app runtime.
