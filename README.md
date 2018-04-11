@@ -21,7 +21,7 @@ common web technologies (HTML, JS, CSS) and a well documented API.
 
 >TODO
 
-## Launching an application
+## Launching a PWA (Progressive Web App)
 
 ```bash
 tabby https://mobile.twitter.com
@@ -33,6 +33,8 @@ Which will start a process and load the URL into a native window:
 
 URLs loaded in this way don't have privileged access to the system.
 They're treated as web content, not application chrome.
+
+## Launching a desktop application
 
 To load a desktop app with system privileges, point tabby at a local directory
 containing a ``package.json`` app manifest.
