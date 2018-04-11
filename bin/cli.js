@@ -20,19 +20,15 @@
 require('promise.prototype.finally').shim();
 
 const chalk = require('chalk');
-const cli = require('cli');
 const commandLineArgs = require('command-line-args');
 const commandLineCommands = require('command-line-commands');
 const commandLineUsage = require('command-line-usage');
 const fs = require('fs-extra');
-const klaw = require('klaw');
 const os = require('os');
 const normalizePackageData = require('normalize-package-data');
 const packageJson = require('../package.json');
 const path = require('path');
-const pify = require('pify');
 const readPkgUp = require('read-pkg-up');
-const semver = require('semver');
 const spawn = require('child_process').spawn;
 
 const distDir = path.join(__dirname, '..', 'dist', process.platform);
@@ -63,9 +59,6 @@ switch (command) {
     break;
   case 'help':
     displayHelp();
-    break;
-  case 'update':
-    updateRuntime();
     break;
   default:
     if (argv.includes('-v') ||
@@ -225,24 +218,6 @@ function displayHelp() {
 
   const usage = commandLineUsage(sections);
   console.log(usage);
-}
-
-function updateRuntime() {
-  const installRuntime = require('./install-runtime');
-  let exitCode = 0;
-  cli.spinner('  Updating runtime …');
-  installRuntime()
-  .then(() => {
-    cli.spinner(chalk.green.bold('✓ ') + 'Updating runtime … done!', true);
-  })
-  .catch(error => {
-    exitCode = 1;
-    cli.spinner(chalk.red.bold('✗ ') + 'Updating runtime … failed!', true);
-    console.error(error);
-  })
-  .finally(() => {
-    process.exit(exitCode);
-  });
 }
 
 function readProjectMetadata(projectDir, transformer) {
