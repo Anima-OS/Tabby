@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="117.18684"
+   height="39.240002"
+   viewBox="0 0 117.18683 39.240001"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="wordmark.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="6.1790254"
+     inkscape:cx="39.749679"
+     inkscape:cy="2.9849209"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="text841"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     aria-label="Quokka"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#55575c;fill-opacity:1;stroke:none"
+     id="text3703"
+     transform="translate(-15.959312,-5.708477)">
+    <g
+       aria-label="Quokka™"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';letter-spacing:0px;word-spacing:0px;fill:#55575c;fill-opacity:1;stroke:none"
+       id="text841"
+       transform="translate(2.1038917,-84.964855)">
+      <g
+         aria-label="Tabby™"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';letter-spacing:0px;word-spacing:0px;fill:#55575c;fill-opacity:1;stroke:none"
+         id="text822"
+         transform="translate(-11.490485,-40.944968)">
+        <path
+           d="m 45.905905,139.2983 h -6.84 v 22.68 h -6.56 v -22.68 h -7.16 v -5.04 h 21.2 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#55575c;fill-opacity:1"
+           id="path4581"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 62.70528,155.8183 q 0,1.2 0.32,1.76 0.36,0.56 1.12,0.84 l -1.32,4.12 q -1.96,-0.16 -3.2,-0.84 -1.2,-0.68 -1.92,-2.2 -2.08,3.16 -6.4,3.16 -3.16,0 -5.04,-1.84 -1.88,-1.84 -1.88,-4.8 0,-3.48 2.56,-5.32 2.56,-1.84 7.4,-1.84 h 2.16 v -0.92 q 0,-1.88 -0.8,-2.56 -0.8,-0.72 -2.8,-0.72 -1.04,0 -2.52,0.32 -1.48,0.28 -3.04,0.8 l -1.44,-4.16 q 2,-0.76 4.08,-1.16 2.12,-0.4 3.92,-0.4 4.56,0 6.68,1.88 2.12,1.88 2.12,5.64 z m -9.56,2.32 q 1.04,0 1.88,-0.52 0.88,-0.52 1.48,-1.48 v -3.8 h -1.56 q -2.16,0 -3.24,0.76 -1.04,0.76 -1.04,2.36 0,1.28 0.64,2 0.68,0.68 1.84,0.68 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#55575c;fill-opacity:1"
+           id="path4583"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 79.698405,140.0583 q 3.88,0 5.92,2.96 2.08,2.96 2.08,8.36 0,3.28 -1.04,5.84 -1,2.56 -2.92,4 -1.88,1.44 -4.48,1.44 -1.76,0 -3.2,-0.68 -1.4,-0.72 -2.36,-2.04 l -0.32,2.04 h -5.6 v -29.68 l 6.32,-0.68 v 11.28 q 0.92,-1.28 2.44,-2.04 1.52,-0.8 3.16,-0.8 z m -2.24,18 q 3.68,0 3.68,-6.68 0,-3.76 -0.88,-5.2 -0.88,-1.48 -2.52,-1.48 -2.16,0 -3.64,2.48 v 8.8 q 1.28,2.08 3.36,2.08 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#55575c;fill-opacity:1"
+           id="path4585"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 103.60465,140.0583 q 3.88,0 5.92,2.96 2.08,2.96 2.08,8.36 0,3.28 -1.04,5.84 -1,2.56 -2.92,4 -1.88,1.44 -4.48,1.44 -1.76,0 -3.199995,-0.68 -1.4,-0.72 -2.36,-2.04 l -0.32,2.04 h -5.6 v -29.68 l 6.32,-0.68 v 11.28 q 0.92,-1.28 2.439995,-2.04 1.52,-0.8 3.16,-0.8 z m -2.24,18 q 3.68,0 3.68,-6.68 0,-3.76 -0.88,-5.2 -0.88,-1.48 -2.52,-1.48 -2.159995,0 -3.639995,2.48 v 8.8 q 1.28,2.08 3.359995,2.08 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#55575c;fill-opacity:1"
+           id="path4587"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 126.92028,162.0183 q -1.28,4.12 -4.2,6.32 -2.88,2.24 -7.76,2.52 l -0.68,-4.44 q 3.04,-0.4 4.48,-1.36 1.48,-0.96 2.36,-3.08 h -2.16 l -6.48,-21.24 h 6.72 l 3.8,17.2 4.16,-17.2 h 6.52 z"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#55575c;fill-opacity:1"
+           id="path4589"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 137.3594,155.55697 h -1.17333 v 3.264 h -1.23733 v -3.264 h -1.216 v -0.97067 h 3.78666 z m 5.17334,3.264 h -1.184 l -0.0427,-1.728 -0.0107,-0.416 q 0,-0.42667 0.0853,-1.13067 h -0.032 l -0.74667,2.83734 h -0.96 l -0.832,-2.82667 h -0.0213 q 0.0747,0.8 0.064,1.536 l -0.0427,1.728 h -1.14133 l 0.14933,-4.23467 h 1.58933 l 0.704,2.66667 0.61867,-2.66667 h 1.65333 z"
+           style="font-size:10.66666698px"
+           id="path4591"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-![Activity Level](https://img.shields.io/badge/status-active-brightgreen.svg?longCache=true&style=flat-square)
+![Activity Level](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat-square)
 ![Stability](https://anima-os.github.io/stabl-badges/experimental.svg)
 ![Travis Status](https://travis-ci.org/mozilla/qbrt.svg?branch=master)
 [![Taskcluster Status](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/latest)
@@ -6,7 +6,9 @@
 
 ![Logo](logo.svg)
 
-Tabby: Quokka App Runtime
+![Wordmark](wordmark.svg)
+
+Quokka App Runtime
 ===
 
 **Tabby** is an app runtime (similar to Electron, nw.js, Yode and qbrt) on top of Quokka.
