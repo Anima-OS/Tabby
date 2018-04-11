@@ -4,15 +4,14 @@
 [![Taskcluster Status](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla/qbrt/master/latest)
 [![Greenkeeper Status](https://badges.greenkeeper.io/mozilla/qbrt.svg)](https://greenkeeper.io/)
 
-
 ![Logo](logo.svg)
 
 Tabby: Quokka App Runtime
 ===
 
-qbrt is a command-line interface to a Gecko desktop app runtime.
-It's designed to simplify the process of building and testing desktop apps
-using Gecko.
+**Tabby** is an app runtime (similar to Electron, nw.js, Yode and qbrt) on top of Quokka.
+It is designed to enable the development of secure, flexible, multiplatform applications using
+common web technologies (HTML, JS, CSS) and a well documented API.
 
 # Usage
 
