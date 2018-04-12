@@ -29,7 +29,7 @@ tabby https://mobile.twitter.com
 
 Which will start a process and load the URL into a native window:
 
-![PWA-Screenshot](https://lh4.googleusercontent.com/z-2Rnx0OzU6ZouJB2VQNTHyzuVTeSJXWjFOL91ngMbHnyWG1jmsuhlTctmlTX8PPauxz-NxucHcmDoDHRwoN=w1920-h966)
+<img width="695" alt="PWA-Screenshot" src="https://lh4.googleusercontent.com/uVmXqWUqF4B5jky0jfrSq2GHU2EViy7A88_gnn7ZxsyeEi5aLiYNgDI54JS3sgz5w_geyrvtkhqa3IOrT1JG=w1920-h966">
 
 URLs loaded in this way don't have privileged access to the system.
 They're treated as web content, not application chrome.
