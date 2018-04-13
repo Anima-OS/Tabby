@@ -1,5 +1,5 @@
 {
-  "name": "qbrt",
+  "name": "tabby",
   "version": "0.2.2",
   "lockfileVersion": 1,
   "requires": true,
@@ -1633,14 +1633,6 @@
         }
       }
     },
-    "klaw": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/klaw/-/klaw-2.0.0.tgz",
-      "integrity": "sha1-WcEo4Nxc5BAgEVEZTuucv4WGUPY=",
-      "requires": {
-        "graceful-fs": "4.1.11"
-      }
-    },
     "lazystream": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/lazystream/-/lazystream-1.0.0.tgz",
@@ -1835,6 +1827,22 @@
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.4.3.tgz",
       "integrity": "sha1-XG2ixdflgx6P+jlklQ+NZnSskLg=",
       "dev": true
+    },
+    "optimist": {
+      "version": "0.6.1",
+      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
+      "integrity": "sha1-2j6nRob6IaGaERwybpDrFaAZZoY=",
+      "requires": {
+        "minimist": "0.0.8",
+        "wordwrap": "0.0.3"
+      },
+      "dependencies": {
+        "wordwrap": {
+          "version": "0.0.3",
+          "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
+          "integrity": "sha1-o9XabNXAvAAI03I0u68b7WMFkQc="
+        }
+      }
     },
     "optionator": {
       "version": "0.8.2",

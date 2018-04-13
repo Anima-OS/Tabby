@@ -16,10 +16,8 @@
 
 'use strict';
 
-// Polyfill Promise.prototype.finally().
-require('promise.prototype.finally').shim();
-
 const chalk = require('chalk');
+const opts = require("optimist").argv
 const commandLineArgs = require('command-line-args');
 const commandLineCommands = require('command-line-commands');
 const commandLineUsage = require('command-line-usage');
@@ -34,42 +32,29 @@ const spawn = require('child_process').spawn;
 const distDir = path.join(__dirname, '..', 'dist', process.platform);
 const installDir = path.join(distDir, process.platform === 'darwin' ? 'Runtime.app' : 'runtime');
 
-const validCommands = [ null, 'run', 'version', 'help', 'update' ];
-let parsedCommands = {};
-
-try {
-  parsedCommands = commandLineCommands(validCommands);
+function usage() {
+  console.error(
+    [``,
+    `${chalk.green("Usage:")}`
+      ,``
+      ,'tabby PATH'
+      , ``
+      , 'Options:'
+      , '-h, --help    display this help message'
+      , '-v, --version display runtime version'
+      , ''
+      , 'PATH has to be one of:'
+      , `${chalk.bgBlue("URL")} || ${chalk.bgGreen("Path to package.json")}`
+      , ''
+      , `More information can be found at ${chalk.cyanBright("https://github.com/Anima-OS/Tabby")}`
+    ].join('\n')
+  )
+  process.exit(1)
 }
-catch (error) {
-  if (error.name === 'INVALID_COMMAND') {
-    displayHelp();
-    process.exit(1);
-  }
-  else {
-    throw error;
-  }
-}
 
-const command = parsedCommands.command;
-const argv = parsedCommands.argv;
-
-switch (command) {
-  case 'run':
-    runApp();
-    break;
-  case 'help':
-    displayHelp();
-    break;
-  default:
-    if (argv.includes('-v') ||
-        argv.includes('--v') ||
-        argv.includes('--version')) {
-      displayVersion();
-      break;
-    }
-    displayHelp();
-    break;
-}
+if (opts.h || opts.help) usage();
+if (opts.v || opts.version) displayVersion();
+if (opts._[0]) runApp();
 
 function runApp() {
   const optionDefinitions = [
@@ -78,7 +63,7 @@ function runApp() {
     { name: 'path', type: String, defaultOption: true, defaultValue: process.cwd() },
     { name: 'wait-for-jsdebugger', type: Boolean },
   ];
-  const options = commandLineArgs(optionDefinitions, { argv: argv, partial: true });
+  const options = commandLineArgs(optionDefinitions, { argv: opts._[0], partial: true });
 
   const executableDir = process.platform === 'darwin' ? path.join(installDir, 'Contents', 'MacOS') : installDir;
   let executable = path.join("C:\\Program Files\\Quokka", `quokka${process.platform === 'win32' ? '.exe' : ''}`);
@@ -178,46 +163,6 @@ function runApp() {
 
 function displayVersion() {
   console.log(packageJson.version);
-}
-
-function displayHelp() {
-  const sections = [
-    {
-      header: 'qbrt',
-      content: 'qbrt is a command-line interface to a Gecko desktop app runtime. ' +
-               'It\'s designed to simplify the process of building and testing desktop apps using Gecko.',
-    },
-    {
-      header: 'Synopsis',
-      content: '$ qbrt <command> <path or URL>',
-    },
-    {
-      header: 'Command List',
-      content: [
-        { name: 'run', summary: 'Run an app.' },
-        { name: 'update', summary: 'Update the runtime to its latest version.' },
-      ],
-    },
-    {
-      header: 'Examples',
-      content: [
-        {
-          desc: '1. Run an app at a URL.',
-          example: '$ qbrt run https://eggtimer.org/',
-        },
-        {
-          desc: '2. Run an app at a path.',
-          example: '$ qbrt run path/to/my/app/',
-        },
-      ],
-    },
-    {
-      content: `Project home: [underline]{${packageJson.homepage}}`,
-    },
-  ];
-
-  const usage = commandLineUsage(sections);
-  console.log(usage);
 }
 
 function readProjectMetadata(projectDir, transformer) {
