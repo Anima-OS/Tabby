@@ -43,14 +43,6 @@
       "integrity": "sha1-MU3QpLM2j609/NxU7eYXG4htrzw=",
       "dev": true
     },
-    "ansi-escape-sequences": {
-      "version": "3.0.0",
-      "resolved": "https://registry.npmjs.org/ansi-escape-sequences/-/ansi-escape-sequences-3.0.0.tgz",
-      "integrity": "sha1-HBg5S2r5t2/5pjUJ+kl2af0s5T4=",
-      "requires": {
-        "array-back": "1.0.4"
-      }
-    },
     "ansi-escapes": {
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-2.0.0.tgz",
@@ -445,25 +437,6 @@
         "typical": "2.6.1"
       }
     },
-    "command-line-commands": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/command-line-commands/-/command-line-commands-2.0.0.tgz",
-      "integrity": "sha1-Gr2hFjPo03vLGjn3O42Tmi2F7zk=",
-      "requires": {
-        "array-back": "1.0.4"
-      }
-    },
-    "command-line-usage": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/command-line-usage/-/command-line-usage-4.0.0.tgz",
-      "integrity": "sha1-gWsyeItY+f66RNHm2sYPyuspteo=",
-      "requires": {
-        "ansi-escape-sequences": "3.0.0",
-        "array-back": "1.0.4",
-        "table-layout": "0.4.0",
-        "typical": "2.6.1"
-      }
-    },
     "commander": {
       "version": "2.8.1",
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.8.1.tgz",
@@ -663,11 +636,6 @@
         "pify": "2.3.0",
         "yauzl": "2.8.0"
       }
-    },
-    "deep-extend": {
-      "version": "0.4.2",
-      "resolved": "https://registry.npmjs.org/deep-extend/-/deep-extend-0.4.2.tgz",
-      "integrity": "sha1-SLaZwn4zS/ifEIkr5DL25MfTSn8="
     },
     "deep-is": {
       "version": "0.1.3",
@@ -1000,14 +968,6 @@
       "integrity": "sha1-i1vL2ewyfFBBv5qwI/1nUPEXfmU=",
       "requires": {
         "pend": "1.2.0"
-      }
-    },
-    "feature-detect-es6": {
-      "version": "1.3.1",
-      "resolved": "https://registry.npmjs.org/feature-detect-es6/-/feature-detect-es6-1.3.1.tgz",
-      "integrity": "sha1-+IhzavnLDJH1VmO/pHYuuW7nBH8=",
-      "requires": {
-        "array-back": "1.0.4"
       }
     },
     "figures": {
@@ -1682,11 +1642,6 @@
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz",
       "integrity": "sha1-eCA6TRwyiuHYbcpkYONptX9AVa4="
     },
-    "lodash.padend": {
-      "version": "4.6.1",
-      "resolved": "https://registry.npmjs.org/lodash.padend/-/lodash.padend-4.6.1.tgz",
-      "integrity": "sha1-U8y6BH0G4VjTEfRdpiX05J5vFm4="
-    },
     "log-driver": {
       "version": "1.2.5",
       "resolved": "https://registry.npmjs.org/log-driver/-/log-driver-1.2.5.tgz",
@@ -1973,6 +1928,12 @@
       "integrity": "sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=",
       "dev": true
     },
+    "prettier": {
+      "version": "1.12.0",
+      "resolved": "https://registry.npmjs.org/prettier/-/prettier-1.12.0.tgz",
+      "integrity": "sha512-Wz0SMncgaglBzDcohH3ZIAi4nVpzOIEweFzCOmgVEoRSeO72b4dcKGfgxoRGVMaFlh1r7dlVaJ+f3CIHfeH6xg==",
+      "dev": true
+    },
     "process-nextick-args": {
       "version": "1.0.7",
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz",
@@ -2044,11 +2005,6 @@
         "string_decoder": "1.0.3",
         "util-deprecate": "1.0.2"
       }
-    },
-    "reduce-flatten": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/reduce-flatten/-/reduce-flatten-1.0.1.tgz",
-      "integrity": "sha1-JYx479FT3fk8tWEjf2EYTzaW4yc="
     },
     "remove-trailing-separator": {
       "version": "1.0.2",
@@ -2384,18 +2340,6 @@
             }
           }
         }
-      }
-    },
-    "table-layout": {
-      "version": "0.4.0",
-      "resolved": "https://registry.npmjs.org/table-layout/-/table-layout-0.4.0.tgz",
-      "integrity": "sha1-xw/wRV2a3WO5H3wVp3kmKVwODn0=",
-      "requires": {
-        "array-back": "1.0.4",
-        "deep-extend": "0.4.2",
-        "lodash.padend": "4.6.1",
-        "typical": "2.6.1",
-        "wordwrapjs": "2.0.0"
       }
     },
     "tap": {
@@ -4280,17 +4224,6 @@
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz",
       "integrity": "sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=",
       "dev": true
-    },
-    "wordwrapjs": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/wordwrapjs/-/wordwrapjs-2.0.0.tgz",
-      "integrity": "sha1-q1X2leYRjak4WP3XDAU9HF4BrCA=",
-      "requires": {
-        "array-back": "1.0.4",
-        "feature-detect-es6": "1.3.1",
-        "reduce-flatten": "1.0.1",
-        "typical": "2.6.1"
-      }
     },
     "wrappy": {
       "version": "1.0.2",

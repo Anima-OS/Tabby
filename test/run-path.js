@@ -14,46 +14,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License. */
 
-'use strict';
+"use strict";
 
 // Polyfill Promise.prototype.finally().
-require('promise.prototype.finally').shim();
+require("promise.prototype.finally").shim();
 
-const path = require('path');
-const spawn = require('child_process').spawn;
-const tap = require('tap');
+const path = require("path");
+const spawn = require("child_process").spawn;
+const tap = require("tap");
 
 let exitCode = 0;
 
 new Promise((resolve, reject) => {
   // Paths are relative to the top-level directory in which `npm test` is run.
-  const child = spawn('node', [ path.join('bin', 'cli.js'), 'run', 'test/hello-world/' ]);
+  const child = spawn("node", [
+    path.join("bin", "cli.js"),
+    "run",
+    "test/hello-world/",
+  ]);
 
-  let totalOutput = '';
+  let totalOutput = "";
 
-  child.stdout.on('data', data => {
-    const output = data.toString('utf8').trim();
+  child.stdout.on("data", data => {
+    const output = data.toString("utf8").trim();
     console.log(output);
     totalOutput += output;
   });
 
-  child.stderr.on('data', data => {
-    console.error(data.toString('utf8').trim());
+  child.stderr.on("data", data => {
+    console.error(data.toString("utf8").trim());
   });
 
-  child.on('close', code => {
-    tap.equal(totalOutput, 'console.log: Hello, World!');
-    tap.equal(code, 0, 'app exited with success code');
+  child.on("close", code => {
+    tap.equal(totalOutput, "console.log: Hello, World!");
+    tap.equal(code, 0, "app exited with success code");
   });
 
-  child.on('close', (code, signal) => {
+  child.on("close", (code, signal) => {
     resolve();
   });
 })
-.catch(error => {
-  console.error(error);
-  exitCode = 1;
-})
-.finally(() => {
-  process.exit(exitCode);
-});
+  .catch(error => {
+    console.error(error);
+    exitCode = 1;
+  })
+  .finally(() => {
+    process.exit(exitCode);
+  });

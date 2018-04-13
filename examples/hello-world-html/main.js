@@ -1,36 +1,44 @@
 /* Any copyright is dedicated to the Public Domain.
  * http://creativecommons.org/publicdomain/zero/1.0/ */
 
-'use strict';
+"use strict";
 
 const { classes: Cc, interfaces: Ci, results: Cr, utils: Cu } = Components;
-const { console } = Cu.import('resource://gre/modules/Console.jsm', {});
-const { Runtime } = Cu.import('resource://qbrt/modules/Runtime.jsm', {});
-const { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+const { console } = Cu.import("resource://gre/modules/Console.jsm", {});
+const { Runtime } = Cu.import("resource://qbrt/modules/Runtime.jsm", {});
+const { Services } = Cu.import("resource://gre/modules/Services.jsm", {});
 
-const WINDOW_URL = 'chrome://app/content/index.html';
+const WINDOW_URL = "chrome://app/content/index.html";
 
-let uuid = require('sdk/util/uuid').uuid();
+let uuid = require("sdk/util/uuid").uuid();
 
-dump ("\n" + uuid + "\n");
-dump ("\n Runtime: " + Services.appinfo.name + "\n");
+dump("\n" + uuid + "\n");
+dump("\n Runtime: " + Services.appinfo.name + "\n");
 
 const WINDOW_FEATURES = [
-  'chrome',
-  'dialog=no',
-  'all',
-  'width=640',
-  'height=480',
-  'resizable',
-].join(',');
+  "chrome",
+  "dialog=no",
+  "all",
+  "width=640",
+  "height=480",
+  "resizable",
+].join(",");
 
 // On startup, activate ourselves, since starting up from Node doesn't do this.
 // TODO: do this by default for all apps started via Node.
-if (Services.appinfo.OS === 'Darwin') {
-  Cc['@mozilla.org/widget/macdocksupport;1'].getService(Ci.nsIMacDockSupport).activateApplication(true);
+if (Services.appinfo.OS === "Darwin") {
+  Cc["@mozilla.org/widget/macdocksupport;1"]
+    .getService(Ci.nsIMacDockSupport)
+    .activateApplication(true);
 }
 
-const window = Services.ww.openWindow(null, WINDOW_URL, '_blank', WINDOW_FEATURES, null);
+const window = Services.ww.openWindow(
+  null,
+  WINDOW_URL,
+  "_blank",
+  WINDOW_FEATURES,
+  null
+);
 window.require = require;
 // Runtime.openDevTools(window);
 // console.log('main.js loaded!');

@@ -12,16 +12,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License. */
 
-'use strict';
+"use strict";
 
 const { classes: Cc, interfaces: Ci, results: Cr, utils: Cu } = Components;
-const { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+const { Services } = Cu.import("resource://gre/modules/Services.jsm", {});
 
 const windowFeatures = [
-  'width=640',
-  'height=480',
-  'resizable',
-  'scrollbars',
-].join(',');
+  "width=640",
+  "height=480",
+  "resizable",
+  "scrollbars",
+].join(",");
 
-Services.ww.openWindow(null, 'chrome://app/content/window.xul', '_blank', windowFeatures, null);
+Services.ww.openWindow(
+  null,
+  "chrome://app/content/window.xul",
+  "_blank",
+  windowFeatures,
+  null
+);

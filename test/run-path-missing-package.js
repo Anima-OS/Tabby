@@ -14,57 +14,57 @@
  * See the License for the specific language governing permissions and
  * limitations under the License. */
 
-'use strict';
+"use strict";
 
 // Polyfill Promise.prototype.finally().
-require('promise.prototype.finally').shim();
+require("promise.prototype.finally").shim();
 
-const fs = require('fs-extra');
-const os = require('os');
-const path = require('path');
-const spawn = require('child_process').spawn;
-const tap = require('tap');
+const fs = require("fs-extra");
+const os = require("os");
+const path = require("path");
+const spawn = require("child_process").spawn;
+const tap = require("tap");
 
 let exitCode = 0;
-const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'qbrt-test-'));
+const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "qbrt-test-"));
 
 new Promise((resolve, reject) => {
   // Copy the app to a temporary directory to avoid qbrt finding
   // the package.json file for qbrt itself when looking for the package
   // for the test app.
-  const sourceDir = path.join('test', 'hello-world-missing-package');
-  const destDir = path.join(tempDir, 'hello-world-missing-package');
+  const sourceDir = path.join("test", "hello-world-missing-package");
+  const destDir = path.join(tempDir, "hello-world-missing-package");
   fs.copySync(sourceDir, destDir);
 
   // Paths are relative to the top-level directory in which `npm test` is run.
-  const child = spawn('node', [ path.join('bin', 'cli.js'), 'run', destDir ]);
+  const child = spawn("node", [path.join("bin", "cli.js"), "run", destDir]);
 
-  let totalOutput = '';
+  let totalOutput = "";
 
-  child.stdout.on('data', data => {
-    const output = data.toString('utf8');
+  child.stdout.on("data", data => {
+    const output = data.toString("utf8");
     totalOutput += output;
     console.log(output.trim());
   });
 
-  child.stderr.on('data', data => {
-    console.error(data.toString('utf8').trim());
+  child.stderr.on("data", data => {
+    console.error(data.toString("utf8").trim());
   });
 
-  child.on('close', code => {
-    tap.equal(totalOutput.trim(), 'console.log: Hello, World!');
-    tap.equal(code, 0, 'app exited with success code');
+  child.on("close", code => {
+    tap.equal(totalOutput.trim(), "console.log: Hello, World!");
+    tap.equal(code, 0, "app exited with success code");
   });
 
-  child.on('close', (code, signal) => {
+  child.on("close", (code, signal) => {
     resolve();
   });
 })
-.catch(error => {
-  console.error(error);
-  exitCode = 1;
-})
-.finally(() => {
-  fs.removeSync(tempDir);
-  process.exit(exitCode);
-});
+  .catch(error => {
+    console.error(error);
+    exitCode = 1;
+  })
+  .finally(() => {
+    fs.removeSync(tempDir);
+    process.exit(exitCode);
+  });

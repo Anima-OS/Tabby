@@ -13,15 +13,14 @@
   "scripts": {
     "postinstall": "node ./bin/postinstall.js",
     "start": "node ./bin/cli.js",
-    "test": "eslint --ext .js,.jsm . && tap test/*.js --cov --timeout=600"
+    "test": "eslint --ext .js,.jsm . && tap test/*.js --cov --timeout=600",
+    "pretty": "prettier --config .prettierrc --write */*/*.js"
   },
   "dependencies": {
     "archiver": "^2.0.0",
     "chalk": "^2.0.1",
     "cli": "^1.0.1",
     "command-line-args": "^4.0.6",
-    "command-line-commands": "^2.0.0",
-    "command-line-usage": "^4.0.0",
     "decompress": "^4.0.0",
     "extract-zip": "^1.6.5",
     "fs-extra": "^4.0.0",
@@ -35,6 +34,8 @@
   "devDependencies": {
     "eslint": "^4.0.0",
     "file-url": "^2.0.2",
+    "prettier": "^1.12.0",
     "tap": "10.7.1"
-  }
+  },
+  "stability": "experimental"
 }
