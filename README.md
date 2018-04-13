@@ -29,7 +29,7 @@ tabby https://mobile.twitter.com
 
 Which will start a process and load the URL into a native window:
 
-<img width="695" alt="PWA-Screenshot" src="https://lh4.googleusercontent.com/uVmXqWUqF4B5jky0jfrSq2GHU2EViy7A88_gnn7ZxsyeEi5aLiYNgDI54JS3sgz5w_geyrvtkhqa3IOrT1JG=w1920-h966">
+![Twitter PWA](https://gist.githubusercontent.com/Happy-Ferret/9736a95e1b118f82d3d284843ad9b9e4/raw/099cb70e4df7371f882d3374a1eb01373b2c45f6/Screenshot.png)
 
 URLs loaded in this way don't have privileged access to the system.
 They're treated as web content, not application chrome.
