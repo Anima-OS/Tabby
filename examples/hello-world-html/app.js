@@ -13,7 +13,7 @@ console.log("Hello, World!");
 window.addEventListener(
   "click",
   () => {
-    console.log("Click!");
+    dump("Click!\n");
   },
   false
 );
