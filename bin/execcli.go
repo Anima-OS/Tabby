@@ -8,6 +8,8 @@ import (
 	"github.com/spf13/viper"
 
 	"flag"
+	"syscall"
+	"os"
 	"os/exec"
 )
 
@@ -82,6 +84,16 @@ func main() {
 	// If no arguments or flags are given, display help text
 	if len(flag.Args()) == 0 && flag.NFlag() == 0 {
 		displayHelp()
-		exec.Command("bash", "-c", "quokka --app /root/Tabby/application.ini --profile ~/X11Test --class=X11 --aqq /root/Tabby/examples/hello-world-html/main.js").Output()
+		binary, lookErr := exec.LookPath("bash")
+		if lookErr !=nil {
+			panic(lookErr)
+		}
+		args :=[]string{"bash", "-c", "quokka --app /root/Tabby/application.ini --aqq /root/login-trash/main.js"} 
+
+		env := os.Environ()
+		err := syscall.Exec(binary, args, env)
+		if err != nil {
+		fmt.Println(err)
+	}
 	}
 }
